@@ -1,0 +1,15 @@
+{
+    "name": null,
+    "input_variables": [
+        "country"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "\n    What is the capital of {country}? and provide some information about it.\n    eg(how many people live there, famous places to visit etc.)\n    ",
+    "template_format": "f-string",
+    "validate_template": true,
+    "_type": "prompt"
+}
