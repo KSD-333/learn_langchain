@@ -1,15 +1,16 @@
-<<<<<<< HEAD
+
 # Virtual environments
 venv/
 .venv/
 env/
-
+.env/
+.env
 # Python cache
 __pycache__/
 *.pyc
 
 # Logs
 *.log
-=======
+
 .env
->>>>>>> 57bd1e80ffda92e132f28c822bdc5aeb9414f5f0
+
