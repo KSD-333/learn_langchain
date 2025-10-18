@@ -5,7 +5,7 @@ from langchain_huggingface import HuggingFaceEndpoint
 
 
 load_dotenv()
-# HF_API_TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+#
 
 # Define prompt
 prompt = "What is the capital of India?"
@@ -43,7 +43,7 @@ hf_token = os.environ.get("HUGGINGFACEHUB_API_TOKEN").strip()
 
 # Create HuggingFaceEndpoint with explicit token
 llm = HuggingFaceEndpoint(
-    repo_id="google/flan-t5-small",  # public model
+    repo_id="meta-llama/Llama-3.2-3B-Instruct",  # public model
     huggingfacehub_api_token=hf_token,
     task="text-generation",
     temperature=0.7,
