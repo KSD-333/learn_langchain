@@ -5,9 +5,9 @@ from langchain_ollama import ChatOllama
 ollama_host = "http://localhost:11434"
 
 llm = ChatOllama(
-    model="llama3.2:latest",          # <-- replace with whatever you pulled
-    base_url=ollama_host,      # optional, only needed if not default
-    temperature=0.2,           # tweak creativity           # limit output length
+    model="llama3.2:latest",         
+    base_url=ollama_host,      
+    temperature=0.2,           
 )
 while(True):
     Chat = input("Enter Text For Answer: ")
