@@ -1,12 +1,18 @@
 import streamlit as st
-from backend import app
+from backend import app, get_all_threads
 from langchain_core.messages import HumanMessage
 st.title("Ai Chatbot")
 import uuid
+import sqlite3
+from dotenv import load_dotenv
+load_dotenv()
+import datetime
+
 
 #*******************************UTILITIES*********************************************
 def generate_thread_id():
-    return str(uuid.uuid4())
+    datetime_str = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S") + str(" Chat No " + str(len(get_all_threads())+1))
+    return f"{datetime_str}"
 
 def new_chat():
     thread_id = generate_thread_id()
@@ -36,7 +42,7 @@ if "thread_id" not in st.session_state:
     st.session_state.thread_id = generate_thread_id()
 
 if "chat_thread" not in st.session_state:
-    st.session_state.chat_thread = []
+    st.session_state.chat_thread = get_all_threads()
 
 
 
